@@ -59,5 +59,8 @@ body {
 
 
 
-.text{background-color:lightgrey;}
-div{}
+.text{background-color:lightgrey;
+  
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;}
