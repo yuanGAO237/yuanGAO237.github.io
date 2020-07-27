@@ -1,62 +1,62 @@
 <!DOCTYPE html>
+
+<html>
+
+<head>
 <meta charset="utf-8">
+<title>Black Goose Bistro</title>
 
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
+<style>
+body {
+  background-color: #faf2e4;
+  margin: 0 10%;
+  font-family: sans-serif;
+  }
 
-<!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
+h1 {
+  text-align: center;
+  font-family: serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #57b1dc;
+  margin-top: 30px;
+}
 
-<script>
+h2 {
+  color: #d1633c;
+  font-size: 1em;
+}
 
+</style>
+</style>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
 
-// set the dimensions and margins of the graph
-var margin = {top: 30, right: 30, bottom: 70, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+<body>
+<h1><img src='mountain.jpg' alt='mountain'> <br> Black Goose Bistro</h1>
+<h2>The Restaurant</h2>
+<p>
+The Black Goose Bistro offers casual lunch and dinner fare in
+a hip atmosphere. <br>The menu changes regularly to highlight the
+freshest ingredients.
+</p>
 
-// append the svg object to the body of the page
-var svg = d3.select("#my_dataviz")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+<h2>Catering</h2>
+<p>
+You have fun... <em>we'll handle the cooking</em>. Black Goose Catering
+can handle events from snacks for bridge club to elegant corporate
+</p>
 
-// Parse the Data
-d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master/example.csv", function(data) {
+<h2>Location and Hours</h2>
+<p>
+Seekonk, Massachusetts;
+Monday through Thursday 11am to 9pm, Friday and Saturday, 11am to
+midnight
+</p>
 
-// X axis
-var x = d3.scaleBand()
-  .range([ 0, width ])
-  .domain(data.map(function(d) { return d.Country; }))
-  .padding(0.2);
-svg.append("g")
-  .attr("transform", "translate(0," + height + ")")
-  .call(d3.axisBottom(x))
-  .selectAll("text")
-    .attr("transform", "translate(-10,0)rotate(-45)")
-    .style("text-anchor", "end");
+</body>
 
-// Add Y axis
-var y = d3.scaleLinear()
-  .domain([0, 13000])
-  .range([ height, 0]);
-svg.append("g")
-  .call(d3.axisLeft(y));
-
-// Bars
-svg.selectAll("mybar")
-  .data(data)
-  .enter()
-  .append("rect")
-    .attr("x", function(d) { return x(d.Country); })
-    .attr("y", function(d) { return y(d.Value); })
-    .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.Value); })
-    .attr("fill", "yellow")
-
-})
-
+<script type='text/javascript' src="genre.js">
 </script>
+
+</html>
