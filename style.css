@@ -9,6 +9,7 @@ body {
   overflow: hidden;
 }
 
+div{background-color: #dcdcdc;}
 .axis path,
 .axis line {
   fill: none;
