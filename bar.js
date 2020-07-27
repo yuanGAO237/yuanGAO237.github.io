@@ -1,10 +1,7 @@
-
-
-
 // set the dimensions and margins of the graph
-var margin = {top: 30, right: 30, bottom: 70, left: 60},
+var margin = {top: 10, right: 30, bottom: 90, left: 40},
     width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    height = 450 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -16,7 +13,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function(data) {
+d3.csv(https:"//raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master/group_genre.csv", function(data) {
 
 // X axis
 var x = d3.scaleBand()
@@ -32,7 +29,7 @@ svg.append("g")
 
 // Add Y axis
 var y = d3.scaleLinear()
-  .domain([0, 13000])
+  .domain([0, 4000])
   .range([ height, 0]);
 svg.append("g")
   .call(d3.axisLeft(y));
@@ -42,11 +39,19 @@ svg.selectAll("mybar")
   .data(data)
   .enter()
   .append("rect")
-    .attr("x", function(d) { return x(d.Country); })
-    .attr("y", function(d) { return y(d.Value); })
+    .attr("x", function(d) { return x(d.prime_genre); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.Value); })
     .attr("fill", "#69b3a2")
+    // no bar at the beginning thus:
+    .attr("height", function(d) { return height - y(0); }) // always equal to 0
+    .attr("y", function(d) { return y(0); })
+
+// Animation
+svg.selectAll("rect")
+  .transition()
+  .duration(800)
+  .attr("y", function(d) { return y(d.count); })
+  .attr("height", function(d) { return height - y(d.count); })
+  .delay(function(d,i){console.log(i) ; return(i*100)})
 
 })
-
