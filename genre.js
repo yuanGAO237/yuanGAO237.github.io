@@ -54,6 +54,8 @@ svg.selectAll(".bar")
     .attr("width", x.bandwidth())
     .attr("height", function(d) { return height - y(d.count); })
     .attr("fill", "#69b3a2")
+    .on('mouseover',tip.show)
+    .on('mouseout',tip.hide)
 
 })
 
