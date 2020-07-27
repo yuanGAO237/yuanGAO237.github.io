@@ -35,11 +35,13 @@ svg.append("g")
   .call(d3.axisLeft(y));
   
 ///////newested add 1
-svg.append('g')
-   .append('text')
-   .text('count')
-
-
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Frequency:</strong> <span style='color:red'>" + d.count + "</span>";
+  })
+svg.call(tip);
 /*var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
