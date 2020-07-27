@@ -34,6 +34,15 @@ var y = d3.scaleLinear()
 svg.append("g")
   .call(d3.axisLeft(y));
 
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        console.log(d)
+        return "<strong>Name:</strong>" + d.prime_genre + "<br><strong>Value:</strong>" + d.count;
+    });
+svg.call(tip);    
 // Bars
 svg.selectAll("mybar")
   .data(data)
@@ -47,12 +56,6 @@ svg.selectAll("mybar")
 
 })
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        console.log(d)
-        return "<strong>Name:</strong>" + d.prime_genre + "<br><strong>Value:</strong>" + d.count;
-    });
-svg.call(tip);
+
+
 
