@@ -62,9 +62,13 @@ body {
   margin: 20px;
   padding: 20px;}
 
+/* navigation bar*/
 li{
 	list-style-type: none;
 }
 a{
   text-decoration: none;
+}
+nav{
+  width: 100vw;
 }
