@@ -46,3 +46,13 @@ svg.selectAll("mybar")
     .attr("fill", "#69b3a2")
 
 })
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        console.log(d)
+        return "<strong>Name:</strong>" + d.key + "<br><strong>Value:</strong>" + d.value;
+    });
+
+
