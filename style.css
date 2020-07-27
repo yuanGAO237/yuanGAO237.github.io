@@ -74,7 +74,7 @@ a{
 }
 nav{
   width: 100vw;
-  background-color: #D6EFFF;
+  background-color: goldenrod;
 }
 /*
 ul{
@@ -89,3 +89,6 @@ body{
 ul{ margin:0;
 	padding:0;
 	display: flex;}
+a:hover{
+  background-color: maroon;
+}
