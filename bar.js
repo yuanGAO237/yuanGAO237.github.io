@@ -18,7 +18,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 // X axis
 var x = d3.scaleBand()
   .range([ 0, width ])
-  .domain(data.map(function(d) { return d.Country; }))
+  .domain(data.map(function(d) { return d.prime_genre; }))
   .padding(0.2);
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
