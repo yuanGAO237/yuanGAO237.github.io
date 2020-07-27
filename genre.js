@@ -35,19 +35,20 @@ svg.append("g")
   .call(d3.axisLeft(y));
 
 
-var tip = d3.tip()
+/*var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
         console.log(d)
         return "<strong>Name:</strong>" + d.prime_genre + "<br><strong>Value:</strong>" + d.count;
     });
-svg.call(tip);    
+svg.call(tip); */   
 // Bars
-svg.selectAll("mybar")
+svg.selectAll(".bar")
   .data(data)
   .enter()
   .append("rect")
+    .attr('class','bar')
     .attr("x", function(d) { return x(d.prime_genre); })
     .attr("y", function(d) { return y(d.count); })
     .attr("width", x.bandwidth())
