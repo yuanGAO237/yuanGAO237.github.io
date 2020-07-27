@@ -54,5 +54,5 @@ var tip = d3.tip()
         console.log(d)
         return "<strong>Name:</strong>" + d.key + "<br><strong>Value:</strong>" + d.value;
     });
-
+svg.call(tip);
 
