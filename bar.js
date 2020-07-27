@@ -13,7 +13,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv(https:"//raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master/group_genre.csv", function(data) {
+d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master/group_genre.csv", function(data) {
 
 // X axis
 var x = d3.scaleBand()
