@@ -71,6 +71,13 @@ li{
 }
 a{
   text-decoration: none;
+  
+  /*below I changed the color*/
+  color: black;
+  /*I added some padding*/
+  padding: 2vw;
+  /*also changed the font family but that's totally irrelevant*/
+  font-family: monospace;
 }
 nav{
   width: 100vw;
