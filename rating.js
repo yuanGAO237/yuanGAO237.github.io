@@ -116,5 +116,5 @@ svg.selectAll(".bar")
     .on('mouseout',tip.hide)
 
 })
-
+svg.append('text').text('Total Rating Count by Genre')
 
