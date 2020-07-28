@@ -8,11 +8,19 @@
 <link rel='stylesheet' href ='style.css'>
 <!-- <script src="https://d3js.org/d3.v5.min.js"></script>-->
 <script src="https://d3js.org/d3.v4.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 </head>
 
 <body>
 <header>
-  
+  <div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href='index.html'>Number of Apps by Genre</a>
+  <a href='rating.html'>Rating by Genre</a>
+  <a href="price.html">price</a>
+</div>
+<!--
 	<nav>
 		<ul>
 			<li><a href='index.html'> App Amount by Genre</a></li>
@@ -20,19 +28,23 @@
 			<li><a href='price.html'> App Price</a></li>
 		</ul>
 	</nav>
-
+-->
 
 <h1>Visualization for Apple Store App</h1>
 </header>
 
 <h2>
-Total Rating by Genre
-<div id="my_dataviz1"></div>
-</h2>
-
-
-</body>
+Rating by Genre</h2>
+<div id="my_dataviz1" style="display:inline-block;vertical-align:top;">
+</div>
 
 <script src='rating.js'></script>
+<div class='text' style="display:inline-block;">
+	<div> This chart show the number of App in Apple Store by each genre</div>
+	<div> Mouse over on the graph to see specific number</div>
+</div>
+</body>
+
+
 
 </html>
