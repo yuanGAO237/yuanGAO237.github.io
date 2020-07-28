@@ -81,7 +81,7 @@ a{
 }
 nav{
   width: 100vw;
-  background-color: goldenrod;
+  background-color: gold;
 }
 /*
 ul{
@@ -97,5 +97,5 @@ ul{ margin:0;
 	padding:0;
 	display: flex;}
 a:hover{
-  background-color: maroon;
+  background-color: goldenrod;
 }
