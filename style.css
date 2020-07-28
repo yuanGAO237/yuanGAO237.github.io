@@ -128,4 +128,11 @@ a:hover{
   color: white;
 }
 
-h1{text-align:center;}
+h1{
+    text-align:center;
+    background-color: white;
+    padding:0;
+    margin:0;
+    float: center;
+
+}
