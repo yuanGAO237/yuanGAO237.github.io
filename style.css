@@ -44,7 +44,7 @@ body {
   font-size: 10px;
   width: 100%;
   line-height: 1;
-  color: white
+  color: white;
   content: "\25BC";
   position: absolute;
   text-align: center;
