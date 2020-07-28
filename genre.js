@@ -66,6 +66,11 @@ svg.selectAll(".bar")
 
 })
 
-
+svg.append('text')
+.attr("x", (width / 2))             
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle") 
+        .style("font-size", "16px") 
+.text('Number of App by Genre')
 
 
