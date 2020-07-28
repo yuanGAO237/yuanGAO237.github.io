@@ -124,6 +124,6 @@ a:hover{
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: 48d1cc;
+  background-color: black;
   color: white;
 }
