@@ -36,6 +36,28 @@ body {
   color: white;
 }
 
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis--x path {
+  display: none;
+}
+
+
+svg {
+    position: absolute;
+    margin-top: 40px;
+}
+
+select {
+  margin-left: 60px;
+}
+
 h1{
     text-align:center;
     background-color: white;
@@ -55,24 +77,3 @@ h3 {
 }
 
 
-.bar {
-  fill: steelblue;
-}
-
-.bar:hover {
-  fill: brown;
-}
-
-.axis--x path {
-  display: none;
-}
-
-
-svg {
-    position: absolute;
-  margin-top: 40px;
-}
-
-select {
-  margin-left: 60px;
-}
