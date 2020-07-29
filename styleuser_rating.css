@@ -53,9 +53,26 @@ h3 {
   border-bottom: 1px solid lightgrey;
   margin-top: 30px;
 }
-.appic {
-  text-align: left
-  height: 200px;
-  width: 50%;
-  
+
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis--x path {
+  display: none;
+}
+
+
+svg {
+    position: absolute;
+  margin-top: 40px;
+}
+
+select {
+  margin-left: 60px;
 }
