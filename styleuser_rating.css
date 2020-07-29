@@ -37,7 +37,7 @@ body {
 }
 
 .bar {
-  fill: steelblue;
+  fill: midnightblue;
 }
 
 .bar:hover {
@@ -55,7 +55,7 @@ svg {
 }
 
 select {
-  margin-left: 50px;
+  margin-left: 60px;
 }
 
 h1{
