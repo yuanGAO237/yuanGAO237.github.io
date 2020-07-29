@@ -18,7 +18,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 // X axis
 var x = d3.scaleBand()
   .range([ 0, width ])
-  .domain(data.map(function(d) { return d.prime_genre; }))
+  .domain(data.map(function(d) { return d.track_name; }))
   .padding(0.2);
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
@@ -39,7 +39,7 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<strong>Count:</strong> <span style='color:red'>" + d.count + "</span>";
+    return "<strong>Count:</strong> <span style='color:red'>" + d.rating_count_tot + "</span>";
   })
 svg.call(tip);
 /*var tip = d3.tip()
