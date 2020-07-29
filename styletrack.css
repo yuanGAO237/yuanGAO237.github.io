@@ -20,7 +20,7 @@ body {
 }
 
 .bar:hover {
-  fill: seagreen ;
+  fill: seagreen;
 }
 
 .x.axis path {
