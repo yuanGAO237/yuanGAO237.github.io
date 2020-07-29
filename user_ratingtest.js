@@ -71,7 +71,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .transition().duration(1000)
       .attr("x", function(d) { return x(d.user_rating); })
       .attr("y", function(d) { return y(d.proportion); })
-      .attr("height", function(d) { return height - y(d.proportionproportion); });
+      .attr("height", function(d) { return height - y(d.proportion); });
 
   }
 
