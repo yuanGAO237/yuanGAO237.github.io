@@ -26,7 +26,7 @@ d3.csv("user_rate.csv", function(d) {
   // filter the data based on the inital value
   var data = csv.filter(function(d) { 
     var sq = d3.select("#filter").property("value");
-    return d.group === sq;
+    return d.prime_genre === sq;
   });
 
   // set the domains of the axes
