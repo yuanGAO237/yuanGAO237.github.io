@@ -30,7 +30,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 
   // set the domains of the axes
   x.domain(data.map(function(d) { return d.user_rating; }));
-  y.domain([0, 100]);
+  y.domain([0, d3.max(data, function(d) { return d.proportion; })]);
 
   // add the svg elements
   g.append("g")
