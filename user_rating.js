@@ -40,13 +40,8 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 
   g.append("g")
       .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("text-anchor", "end")
-      .text("Proportion");
+      .call(d3.axisLeft(y));
+  
 
   // create the bars
   g.selectAll(".bar")
