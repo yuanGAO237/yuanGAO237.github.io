@@ -15,7 +15,7 @@ var csv;
 
 // load the data
 d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master/user_rate.csv", function(d) {
-  d.rating_count_tot = +d.rating_count_tot;
+  d.proportion = +d.proportion;
   return d;
 }, function(error, datafile) {
   if (error) throw error;
@@ -31,7 +31,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 
   // set the domains of the axes
   x.domain(data.map(function(d) { return d.user_rating; }));
-  y.domain([0, 42000000]);
+  y.domain([0, 100]);
 
   // add the svg elements
   g.append("g")
@@ -47,7 +47,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .attr("y", 6)
       .attr("dy", "0.71em")
       .attr("text-anchor", "end")
-      .text("rating_count_tot");
+      .text("proportion");
 
   // create the bars
   g.selectAll(".bar")
@@ -55,9 +55,9 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
     .enter().append("rect")
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.user_rating); })
-      .attr("y", function(d) { return y(d.rating_count_tot); })
+      .attr("y", function(d) { return y(d.proportion); })
       .attr("width", x.bandwidth())
-      .attr("height", function(d) { return height - y(d.rating_count_tot); });
+      .attr("height", function(d) { return height - y(d.proportion); });
 
   // add a change event handler 
   d3.select("#filter").on("change", function() {
@@ -75,8 +75,8 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .data(data)
       .transition().duration(1000)
       .attr("x", function(d) { return x(d.user_rating); })
-      .attr("y", function(d) { return y(d.rating_count_tot); })
-      .attr("height", function(d) { return height - y(d.rating_count_tot); });
+      .attr("y", function(d) { return y(d.proportion); })
+      .attr("height", function(d) { return height - y(d.proportionproportion); });
 
   }
 
