@@ -14,7 +14,7 @@ var g = svg.append("g")
 var csv;
 
 // load the data
-d3.csv("user_rate.csv", function(d) {
+d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master/user_rate.csv", function(d) {
   d.rating_count_tot = +d.rating_count_tot;
   return d;
 }, function(error, datafile) {
