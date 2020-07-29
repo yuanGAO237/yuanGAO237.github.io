@@ -1,5 +1,4 @@
 
-
 var svg = d3.select("svg"),
     margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = +svg.attr("width") - margin.left - margin.right,
@@ -21,11 +20,11 @@ d3.csv("user_rate.csv", function(d) {
 }, function(error, datafile) {
   if (error) throw error;
 
-  // put the original data in tsv
-  tsv = datafile;
+  // put the original data in csv
+  csv = datafile;
 
   // filter the data based on the inital value
-  var data = tsv.filter(function(d) { 
+  var data = csv.filter(function(d) { 
     var sq = d3.select("#filter").property("value");
     return d.group === sq;
   });
