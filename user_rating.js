@@ -30,7 +30,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 
   // set the domains of the axes
   x.domain(data.map(function(d) { return d.user_rating; }));
-  y.domain([0, d3.max(data, function(d) { return d.proportion; })]);
+  y.domain([0, 100]);
 
   // add the svg elements
   g.append("g")
@@ -40,7 +40,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 
   g.append("g")
       .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y).ticks(1,"%"))
+      .call(d3.axisLeft(y))
     .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
