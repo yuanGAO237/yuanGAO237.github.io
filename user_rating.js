@@ -40,7 +40,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 
   g.append("g")
       .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y).ticks(10, "%"))
+      .call(d3.axisLeft(y).ticks("%"))
     .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
