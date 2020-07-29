@@ -2,7 +2,6 @@ body {
   background-color: #f4f4f4;
   margin: 0 10%;
   font-family: sans-serif;
-  text-align: center
   }
 .topnav {
   background-color: #333;
@@ -38,7 +37,7 @@ body {
 }
 
 .bar {
-  fill: steelblue;
+  fill: #4682b4;
 }
 
 .bar:hover {
