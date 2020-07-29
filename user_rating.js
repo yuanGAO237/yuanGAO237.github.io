@@ -1,75 +1,85 @@
-// set the dimensions and margins of the graph
-var margin = {top: 40, right: 40, bottom: 70, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
 
-// append the svg object to the body of the page
-var svg = d3.select("#my_dataviz2")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
 
-// Parse the Data
-d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master/game_top10.csv", function(data) {
+var svg = d3.select("svg"),
+    margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom;
 
-// X axis
-var x = d3.scaleBand()
-  .range([ 0, width ])
-  .domain(data.map(function(d) { return d.track_name; }))
-  .padding(0.2);
-svg.append("g")
-  .attr("transform", "translate(0," + height + ")")
-  .call(d3.axisBottom(x))
-  .selectAll("text")
-    .attr("transform", "translate(-10,0)rotate(-45)")
-    .style("text-anchor", "end");
+var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
+    y = d3.scaleLinear().rangeRound([height, 0]);
 
-// Add Y axis
-var y = d3.scaleLinear()
-  .domain([620000, 2200000])
-  .range([ height, 0]);
-svg.append("g")
-  .call(d3.axisLeft(y));
-  
-///////newested add 1
-var tip = d3.tip()
-  .attr('class', 'd3-tip')
-  .offset([-10, 0])
-  .html(function(d) {
-    return "<strong>Count:</strong> <span style='color:red'>" + d.rating_count_tot + "</span>";
-  })
-svg.call(tip);
-/*var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        console.log(d)
-        return "<strong>Name:</strong>" + d.prime_genre + "<br><strong>Value:</strong>" + d.count;
+var g = svg.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// create a variable that will hold the loaded data
+var csv;
+
+// load the data
+d3.csv("user_rate.csv", function(d) {
+  d.rating_count_tot = +d.rating_count_tot;
+  return d;
+}, function(error, datafile) {
+  if (error) throw error;
+
+  // put the original data in tsv
+  tsv = datafile;
+
+  // filter the data based on the inital value
+  var data = tsv.filter(function(d) { 
+    var sq = d3.select("#filter").property("value");
+    return d.group === sq;
+  });
+
+  // set the domains of the axes
+  x.domain(data.map(function(d) { return d.user_rating; }));
+  y.domain([0, d3.max(data, function(d) { return d.rating_count_tot; })]);
+
+  // add the svg elements
+  g.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  g.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(y).ticks(10, "%"))
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", "0.71em")
+      .attr("text-anchor", "end")
+      .text("Frequency");
+
+  // create the bars
+  g.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d.user_rating); })
+      .attr("y", function(d) { return y(d.rating_count_tot); })
+      .attr("width", x.bandwidth())
+      .attr("height", function(d) { return height - y(d.rating_count_tot); });
+
+  // add a change event handler 
+  d3.select("#filter").on("change", function() {
+      applyFilter(this.value);
     });
-svg.call(tip); */   
-// Bars
-svg.selectAll(".bar")
-  .data(data)
-  .enter()
-  .append("rect")
-    .attr('class','bar')
-    .attr("x", function(d) { return x(d.track_name); })
-    .attr("y", function(d) { return y(d.rating_count_tot); })
-    .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.rating_count_tot); })
-    .attr("fill", "#69b3a2")
-    .on('mouseover',tip.show)
-    .on('mouseout',tip.hide)
 
-})
 
-svg.append('text')
-.attr("x", (width / 2))             
-        .attr("y", 0 - (margin.top / 2))
-        .attr("text-anchor", "middle") 
-        .style("font-size", "16px") 
-.text('Top 10 Games by number of ratings')
+  // call this whenever the filter changes
+  function applyFilter(value) {
+    // filter the data
+    var data = csv.filter(function(d) {return d.prime_genre === value;})
+
+    // update the bars
+    d3.selectAll(".bar")
+      .data(data)
+      .transition().duration(1000)
+      .attr("x", function(d) { return x(d.user_rating); })
+      .attr("y", function(d) { return y(d.rating_count_tot); })
+      .attr("height", function(d) { return height - y(d.rating_count_tot); });
+
+  }
+
+});
 
