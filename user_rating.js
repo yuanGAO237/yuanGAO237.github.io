@@ -56,7 +56,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .attr("x", function(d) { return x(d.user_rating); })
       .attr("y", function(d) { return y(d.proportion); })
       .attr("width", x.bandwidth())
-      .attr("height", function(d) { return height - y(d.proportion); });
+      .attr("height", function(d) { return y(d.proportion); });
 
   // add a change event handler 
   d3.select("#filter").on("change", function() {
