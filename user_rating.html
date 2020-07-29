@@ -20,7 +20,6 @@
   <a href='rating.html'>Rating by Genre</a>
   <a href="track.html">top10</a>
   <a href="user_rating.html">User rating by Genre</a>
-
 </div>
 
 <h1>Visualization for Apple Store App</h1>
@@ -28,20 +27,14 @@
 
 <h2></h2>
 
-<h3>
-<div id="my_dataviz" style="display:inline-block;vertical-align:top;">
-</div>
-</h3>
+    <select id="filter">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+    <svg width="960" height="500"></svg>
 
+<script src="https://d3js.org/d3.v4.min.js"></script>
 <script src='user_rating.js'></script>
-<!--
-<div class='text' style="display:inline-block;">
-	<div> This chart show the number of App in Apple Store by each genre</div>
-	<div> Mouse over on the graph to see specific number</div>
-</div>
--->
-<div class='anotation'>
-	<div> 
 </body>
 
 
