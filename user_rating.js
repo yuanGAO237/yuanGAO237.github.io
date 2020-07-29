@@ -42,12 +42,12 @@ d3.csv("user_rate.csv", function(d) {
   g.append("g")
       .attr("class", "axis axis--y")
       .call(d3.axisLeft(y))
-    .append("text")
+      .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
       .attr("dy", "0.71em")
       .attr("text-anchor", "end")
-      .text("Frequency");
+      .text("rating_count_tot");
 
   // create the bars
   g.selectAll(".bar")
