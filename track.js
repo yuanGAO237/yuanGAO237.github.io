@@ -13,7 +13,7 @@ var svg = d3.select("#my_dataviz2")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master/group_genre.csv", function(data) {
+d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master/game_top10.csv", function(data) {
 
 // X axis
 var x = d3.scaleBand()
@@ -29,7 +29,7 @@ svg.append("g")
 
 // Add Y axis
 var y = d3.scaleLinear()
-  .domain([0, 4000])
+  .domain([620000, 2200000])
   .range([ height, 0]);
 svg.append("g")
   .call(d3.axisLeft(y));
@@ -56,10 +56,10 @@ svg.selectAll(".bar")
   .enter()
   .append("rect")
     .attr('class','bar')
-    .attr("x", function(d) { return x(d.prime_genre); })
-    .attr("y", function(d) { return y(d.count); })
+    .attr("x", function(d) { return x(d.track_name); })
+    .attr("y", function(d) { return y(d.rating_count_tot); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.count); })
+    .attr("height", function(d) { return height - y(d.rating_count_tot); })
     .attr("fill", "#69b3a2")
     .on('mouseover',tip.show)
     .on('mouseout',tip.hide)
