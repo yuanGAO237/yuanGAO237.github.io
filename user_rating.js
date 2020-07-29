@@ -31,7 +31,7 @@ d3.csv("user_rate.csv", function(d) {
 
   // set the domains of the axes
   x.domain(data.map(function(d) { return d.user_rating; }));
-  y.domain([0, d3.max(data, function(d) { return d.rating_count_tot; })]);
+  y.domain([0, 42000000]);
 
   // add the svg elements
   g.append("g")
