@@ -13,7 +13,7 @@ var g = svg.append("g")
 var csv;
 
 // load the data
-d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master/user_rate.csv", function(d) {
+d3.csv("user_rate.csv", function(d) {
   d.proportion = +d.proportion;
   return d;
 }, function(error, datafile) {
@@ -46,7 +46,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .attr("y", 6)
       .attr("dy", "0.71em")
       .attr("text-anchor", "end")
-      .text("Frequency");
+      .text("Proportion");
 
   // create the bars
   g.selectAll(".bar")
