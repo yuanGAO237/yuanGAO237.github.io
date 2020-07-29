@@ -37,11 +37,11 @@ body {
 }
 
 .bar {
-  fill: midnightblue;
+  fill: steelblue;
 }
 
 .bar:hover {
-  fill: brown;
+  fill: midnightblue;
 }
 
 .axis--x path {
