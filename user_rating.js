@@ -1,4 +1,3 @@
-
 var svg = d3.select("svg"),
     margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = +svg.attr("width") - margin.left - margin.right,
@@ -31,7 +30,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 
   // set the domains of the axes
   x.domain(data.map(function(d) { return d.user_rating; }));
-  y.domain([0, 100]);
+  y.domain([0, d3.max(data, function(d) { return d.proportion; })]);
 
   // add the svg elements
   g.append("g")
@@ -41,8 +40,13 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 
   g.append("g")
       .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y));
-      
+      .call(d3.axisLeft(y).ticks(10, "%"))
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", "0.71em")
+      .attr("text-anchor", "end")
+      .text("Frequency");
 
   // create the bars
   g.selectAll(".bar")
@@ -71,9 +75,8 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .transition().duration(1000)
       .attr("x", function(d) { return x(d.user_rating); })
       .attr("y", function(d) { return y(d.proportion); })
-      .attr("height", function(d) { return height - y(d.proportionproportion); });
+      .attr("height", function(d) { return height - y(d.proportion); });
 
   }
 
 });
-
