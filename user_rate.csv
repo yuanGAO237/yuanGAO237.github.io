@@ -1,0 +1,202 @@
+prime_genre,user_rating,rating_count_tot
+Book,0.0,0
+Book,1.0,1
+Book,2.5,1798
+Book,3.0,201
+Book,3.5,252376
+Book,4.0,67767
+Book,4.5,163701
+Book,5.0,88205
+Business,0.0,0
+Business,2.0,53
+Business,2.5,2601
+Business,3.0,6581
+Business,3.5,1947
+Business,4.0,84943
+Business,4.5,141905
+Business,5.0,34891
+Catalogs,0.0,0
+Catalogs,3.5,213
+Catalogs,4.0,2458
+Catalogs,4.5,1309
+Catalogs,5.0,13345
+Education,0.0,0
+Education,1.0,2
+Education,1.5,522
+Education,2.0,13722
+Education,2.5,7174
+Education,3.0,132595
+Education,3.5,40689
+Education,4.0,103096
+Education,4.5,618951
+Education,5.0,97620
+Entertainment,0.0,0
+Entertainment,1.0,428
+Entertainment,1.5,597
+Entertainment,2.0,80677
+Entertainment,2.5,98604
+Entertainment,3.0,684139
+Entertainment,3.5,766330
+Entertainment,4.0,1028667
+Entertainment,4.5,1337793
+Entertainment,5.0,33283
+Finance,0.0,0
+Finance,1.5,715
+Finance,2.0,1051
+Finance,2.5,3166
+Finance,3.0,45323
+Finance,3.5,202646
+Finance,4.0,385558
+Finance,4.5,408792
+Finance,5.0,101705
+Food & Drink,0.0,0
+Food & Drink,1.0,1
+Food & Drink,2.0,4103
+Food & Drink,2.5,1529
+Food & Drink,3.0,2294
+Food & Drink,3.5,125551
+Food & Drink,4.0,29321
+Food & Drink,4.5,452495
+Food & Drink,5.0,262839
+Games,0.0,0
+Games,1.0,151
+Games,1.5,1331
+Games,2.0,190053
+Games,2.5,97885
+Games,3.0,843853
+Games,3.5,1577551
+Games,4.0,4265483
+Games,4.5,41357161
+Games,5.0,4545023
+Health & Fitness,0.0,0
+Health & Fitness,1.0,1
+Health & Fitness,1.5,42
+Health & Fitness,2.0,663
+Health & Fitness,2.5,502
+Health & Fitness,3.0,9084
+Health & Fitness,3.5,197980
+Health & Fitness,4.0,566758
+Health & Fitness,4.5,898052
+Health & Fitness,5.0,111289
+Lifestyle,0.0,0
+Lifestyle,1.0,70
+Lifestyle,1.5,3324
+Lifestyle,2.0,1318
+Lifestyle,2.5,7059
+Lifestyle,3.0,6010
+Lifestyle,3.5,156184
+Lifestyle,4.0,219304
+Lifestyle,4.5,472396
+Lifestyle,5.0,21629
+Medical,0.0,0
+Medical,1.0,5
+Medical,1.5,428
+Medical,3.5,194
+Medical,4.0,29
+Medical,4.5,11774
+Medical,5.0,1204
+Music,0.0,0
+Music,2.0,3018
+Music,2.5,788
+Music,3.0,6348
+Music,3.5,55668
+Music,4.0,2141110
+Music,4.5,1771872
+Music,5.0,1395
+Navigation,0.0,0
+Navigation,3.0,82
+Navigation,3.5,29917
+Navigation,4.0,7539
+Navigation,4.5,507743
+Navigation,5.0,1
+News,0.0,0
+News,1.5,28
+News,2.0,209
+News,2.5,12108
+News,3.0,80664
+News,3.5,580422
+News,4.0,195335
+News,4.5,99160
+News,5.0,8204
+Photo & Video,0.0,0
+Photo & Video,1.0,131
+Photo & Video,1.5,888
+Photo & Video,2.0,207
+Photo & Video,2.5,645977
+Photo & Video,3.0,53351
+Photo & Video,3.5,127416
+Photo & Video,4.0,211752
+Photo & Video,4.5,3586071
+Photo & Video,5.0,383153
+Productivity,0.0,0
+Productivity,1.5,431
+Productivity,2.0,862
+Productivity,2.5,152
+Productivity,3.0,500
+Productivity,3.5,210940
+Productivity,4.0,574069
+Productivity,4.5,608754
+Productivity,5.0,37428
+Reference,0.0,0
+Reference,1.5,103
+Reference,2.5,15
+Reference,3.0,22
+Reference,3.5,29148
+Reference,4.0,228607
+Reference,4.5,1140884
+Reference,5.0,35515
+Shopping,0.0,0
+Shopping,2.5,54936
+Shopping,3.0,198298
+Shopping,3.5,275544
+Shopping,4.0,450641
+Shopping,4.5,1110843
+Shopping,5.0,180808
+Social Networking,0.0,0
+Social Networking,1.0,118
+Social Networking,1.5,525
+Social Networking,2.0,2692
+Social Networking,2.5,36199
+Social Networking,3.0,429661
+Social Networking,3.5,3743658
+Social Networking,4.0,980500
+Social Networking,4.5,2314495
+Social Networking,5.0,90468
+Sports,0.0,0
+Sports,1.0,27
+Sports,1.5,470
+Sports,2.0,4245
+Sports,2.5,81718
+Sports,3.0,155790
+Sports,3.5,597038
+Sports,4.0,542651
+Sports,4.5,213113
+Sports,5.0,4018
+Travel,0.0,0
+Travel,1.0,2
+Travel,1.5,7
+Travel,2.0,1775
+Travel,2.5,6209
+Travel,3.0,88475
+Travel,3.5,458115
+Travel,4.0,314422
+Travel,4.5,275036
+Travel,5.0,444
+Utilities,0.0,0
+Utilities,1.0,364
+Utilities,1.5,1973
+Utilities,2.0,3519
+Utilities,2.5,3389
+Utilities,3.0,122260
+Utilities,3.5,624840
+Utilities,4.0,111998
+Utilities,4.5,657157
+Utilities,5.0,176728
+Weather,0.0,0
+Weather,1.5,12
+Weather,2.5,498
+Weather,3.0,2040
+Weather,3.5,828926
+Weather,4.0,230687
+Weather,4.5,515750
+Weather,5.0,19121
