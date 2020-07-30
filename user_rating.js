@@ -61,15 +61,15 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 
   // call this whenever the filter changes
   function applyFilter(value) {
+   
     // filter the data
     var data = csv.filter(function(d) {return d.prime_genre === value;})
     ////////////////
     x.domain(data.map(function(d) { return d.user_rating; }));
-    y.domain([0, 100]);
+    //d3.selectAll(g)
 
-    // add the svg elements
    
-  
+
   
       /////////////////////
     // update the bars
