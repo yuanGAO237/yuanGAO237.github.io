@@ -3,8 +3,8 @@ var svg = d3.select("svg"),
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom;
 
-var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
-    y = d3.scaleLinear().rangeRound([height, 0]);
+var x = d3.scaleBand().range([0, width]).padding(0.1),
+    y = d3.scaleLinear().range([height, 0]);
 
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -51,7 +51,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .attr("x", function(d) { return x(d.user_rating); })
       .attr("y", function(d) { return y(d.proportion); })
       .attr("width", x.bandwidth())
-      .attr("height", function(d) { return y(d.proportion); });
+      .attr("height", function(d) { return height-y(d.proportion); });
 
   // add a change event handler 
   d3.select("#filter").on("change", function() {
