@@ -56,7 +56,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
 
   g.append('text')
         .attr("x", (width / 2))             
-        .attr("y", 0 - (margin.top / 1.5))
+        .attr("y", 0 - (margin.top / 3))
         .attr("text-anchor", "middle") 
         .style("font-size", "16px") 
         .text('Rating Distribution')
