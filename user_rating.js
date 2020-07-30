@@ -66,23 +66,23 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
     var data = csv.filter(function(d) {return d.prime_genre === value;})
     ////////////////
     x.domain(data.map(function(d) { return d.user_rating; }));
-    //d3.selectAll(g).call(d3.axisBottom(x));
-    ud.append("g")
+  y.domain([0, 100]);
+
+  // add the svg elements
+  gr.append("g")
       .attr("class", "axis axis--x")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x));
 
-    ud.append("g")
+  gr.append("g")
       .attr("class", "axis axis--y")
       .call(d3.axisLeft(y));
-   
-
   
-      /////////////////////
-    // update the bars
-    ud.selectAll(".bar")
-      .data(data)
-      .enter().append("rect")
+
+  // create the bars
+  gr.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.user_rating); })
       .attr("y", function(d) { return y(d.proportion); })
