@@ -29,7 +29,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
   });
 
   // set the domains of the axes
-  x.domain([0,5]);
+  x.domain(data.map(function(d) { return d.user_rating; }));
   y.domain([0, 100]);
 
   // add the svg elements
@@ -51,7 +51,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .attr("x", function(d) { return x(d.user_rating); })
       .attr("y", function(d) { return y(d.proportion); })
       .attr("width", x.bandwidth())
-      .attr("height", function(d) { return height-y(d.proportion); });
+      .attr("height", function(d) { return y(d.proportion); });
 
   // add a change event handler 
   d3.select("#filter").on("change", function() {
@@ -70,7 +70,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .transition().duration(1000)
       .attr("x", function(d) { return x(d.user_rating); })
       .attr("y", function(d) { return y(d.proportion); })
-      .attr("height", function(d) { return height - y(d.proportion); });
+      .attr("height", function(d) { return y(d.proportion); });
 
   }
 
