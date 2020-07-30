@@ -58,7 +58,8 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
         .attr("x", (width / 2))             
         .attr("y", 0 - (margin.top / 3))
         .attr("text-anchor", "middle") 
-        //.style("font-size", "16px") 
+        .style("font-size", "16px") 
+        .style('font-family','serif')
         .text('Ratings Distribution')
 
   // add a change event handler 
