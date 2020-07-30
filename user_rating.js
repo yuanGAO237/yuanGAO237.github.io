@@ -63,7 +63,19 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
   function applyFilter(value) {
     // filter the data
     var data = csv.filter(function(d) {return d.prime_genre === value;})
+    ////////////////
+    x.domain(data.map(function(d) { return d.user_rating; }));
+  y.domain([0, 100]);
 
+  // add the svg elements
+  g.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  g.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(y));
     // update the bars
     d3.selectAll(".bar")
       .data(data)
