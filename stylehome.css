@@ -53,6 +53,7 @@ h3 {
   border-bottom: 1px solid lightgrey;
   margin-top: 30px;
 }
+/*
 .appic {
   text-align: left
   height: 400px;
@@ -63,4 +64,25 @@ h3 {
   height: 400px;
   width: 50%;
   
+}
+*/
+.container {
+  width: 80%;
+  height: 200px;
+  background: aqua;
+  margin: auto;
+  padding: 10px;
+}
+
+.one {
+  width: 15%;
+  height: 200px;
+  background: red;
+  float: left;
+}
+
+.two {
+  margin-left: 15%;
+  height: 200px;
+  background: black;
 }
