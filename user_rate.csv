@@ -1,6 +1,8 @@
 prime_genre,user_rating,proportion
 Book,0.0,0.0
 Book,1.0,0.0
+Book,1.5,0.0
+Book,2.0,0.0
 Book,2.5,0.31
 Book,3.0,0.04
 Book,3.5,43.96
@@ -8,6 +10,8 @@ Book,4.0,11.81
 Book,4.5,28.52
 Book,5.0,15.37
 Business,0.0,0.0
+Business,1.0,0.0
+Business,1.5,0.0
 Business,2.0,0.02
 Business,2.5,0.95
 Business,3.0,2.41
@@ -16,6 +20,11 @@ Business,4.0,31.12
 Business,4.5,51.99
 Business,5.0,12.78
 Catalogs,0.0,0.0
+Catalogs,1.0,0.0
+Catalogs,1.5,0.0
+Catalogs,2.0,0.0
+Catalogs,2.5,0.0
+Catalogs,3.0,0.0
 Catalogs,3.5,1.23
 Catalogs,4.0,14.19
 Catalogs,4.5,7.56
@@ -41,6 +50,7 @@ Entertainment,4.0,25.52
 Entertainment,4.5,33.19
 Entertainment,5.0,0.83
 Finance,0.0,0.0
+Finance,1.0,0.0
 Finance,1.5,0.06
 Finance,2.0,0.09
 Finance,2.5,0.28
@@ -51,6 +61,7 @@ Finance,4.5,35.58
 Finance,5.0,8.85
 Food & Drink,0.0,0.0
 Food & Drink,1.0,0.0
+Food & Drink,1.5,0.0
 Food & Drink,2.0,0.47
 Food & Drink,2.5,0.17
 Food & Drink,3.0,0.26
@@ -91,11 +102,16 @@ Lifestyle,5.0,2.44
 Medical,0.0,0.0
 Medical,1.0,0.04
 Medical,1.5,3.14
+Medical,2.0,0.0
+Medical,2.5,0.0
+Medical,3.0,0.0
 Medical,3.5,1.42
 Medical,4.0,0.21
 Medical,4.5,86.36
 Medical,5.0,8.83
 Music,0.0,0.0
+Music,1.0,0.0
+Music,1.5,0.0
 Music,2.0,0.08
 Music,2.5,0.02
 Music,3.0,0.16
@@ -104,12 +120,17 @@ Music,4.0,53.79
 Music,4.5,44.52
 Music,5.0,0.04
 Navigation,0.0,0.0
+Navigation,1.0,0.0
+Navigation,1.5,0.0
+Navigation,2.0,0.0
+Navigation,2.5,0.0
 Navigation,3.0,0.02
 Navigation,3.5,5.49
 Navigation,4.0,1.38
 Navigation,4.5,93.12
 Navigation,5.0,0.0
 News,0.0,0.0
+News,1.0,0.0
 News,1.5,0.0
 News,2.0,0.02
 News,2.5,1.24
@@ -129,6 +150,7 @@ Photo & Video,4.0,4.23
 Photo & Video,4.5,71.59
 Photo & Video,5.0,7.65
 Productivity,0.0,0.0
+Productivity,1.0,0.0
 Productivity,1.5,0.03
 Productivity,2.0,0.06
 Productivity,2.5,0.01
@@ -138,7 +160,9 @@ Productivity,4.0,40.06
 Productivity,4.5,42.48
 Productivity,5.0,2.61
 Reference,0.0,0.0
+Reference,1.0,0.0
 Reference,1.5,0.01
+Reference,2.0,0.0
 Reference,2.5,0.0
 Reference,3.0,0.0
 Reference,3.5,2.03
@@ -146,6 +170,9 @@ Reference,4.0,15.94
 Reference,4.5,79.54
 Reference,5.0,2.48
 Shopping,0.0,0.0
+Shopping,1.0,0.0
+Shopping,1.5,0.0
+Shopping,2.0,0.0
 Shopping,2.5,2.42
 Shopping,3.0,8.73
 Shopping,3.5,12.13
@@ -193,7 +220,9 @@ Utilities,4.0,6.58
 Utilities,4.5,38.61
 Utilities,5.0,10.38
 Weather,0.0,0.0
+Weather,1.0,0.0
 Weather,1.5,0.0
+Weather,2.0,0.0
 Weather,2.5,0.03
 Weather,3.0,0.13
 Weather,3.5,51.9
