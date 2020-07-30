@@ -67,7 +67,14 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
     ////////////////
     x.domain(data.map(function(d) { return d.user_rating; }));
     //d3.selectAll(g).call(d3.axisBottom(x));
+    g.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
 
+    g.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(y));
    
 
   
@@ -75,10 +82,17 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
     // update the bars
     d3.selectAll(".bar")
       .data(data)
-      .transition().duration(1000)
+      .enter().append("rect")
+      .attr("class", "bar")
       .attr("x", function(d) { return x(d.user_rating); })
       .attr("y", function(d) { return y(d.proportion); })
+      .attr("width", x.bandwidth())
       .attr("height", function(d) { return height - y(d.proportion); });
+
+      //.transition().duration(1000)
+      //.attr("x", function(d) { return x(d.user_rating); })
+      //.attr("y", function(d) { return y(d.proportion); })
+     // .attr("height", function(d) { return height - y(d.proportion); });
 
   }
 
