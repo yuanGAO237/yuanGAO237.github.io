@@ -3,8 +3,8 @@ var svg = d3.select("svg"),
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom;
 
-var x = d3.scaleBand().range([0, width]).padding(0.1),
-    y = d3.scaleLinear().range([height, 0]);
+var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
+    y = d3.scaleLinear().rangeRound([height, 0]);
 
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -29,7 +29,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
   });
 
   // set the domains of the axes
-  x.domain([0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5]);
+  x.domain(data.map(function(d) { return d.user_rating; }));
   y.domain([0, 100]);
 
   // add the svg elements
