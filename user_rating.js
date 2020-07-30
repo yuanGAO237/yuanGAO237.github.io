@@ -42,6 +42,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .attr("class", "axis axis--y")
       .call(d3.axisLeft(y));
   
+  
 
   // create the bars
   g.selectAll(".bar")
@@ -52,6 +53,13 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .attr("y", function(d) { return y(d.proportion); })
       .attr("width", x.bandwidth())
       .attr("height", function(d) { return height - y(d.proportion); });
+
+  g.append('text')
+.attr("x", (width / 2))             
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle") 
+        .style("font-size", "16px") 
+.text('Rating Distribution')
 
   // add a change event handler 
   d3.select("#filter").on("change", function() {
