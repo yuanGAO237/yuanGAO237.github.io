@@ -68,14 +68,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
     y.domain([0, 100]);
 
     // add the svg elements
-    d3.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-    d3.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y));
+   
   
   
       /////////////////////
