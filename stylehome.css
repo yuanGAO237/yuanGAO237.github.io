@@ -79,11 +79,13 @@ h3 {
   height: 200px;
   /*background: red;*/
   float: left;
+  margin:auto;
 }
 
 .two {
   margin-left: 50%;
   height: 200px;
+  margin:auto;
  }
 
 
@@ -93,6 +95,7 @@ h3 {
   height: 200px;
   /*background: red;*/
   float: left;
+  margin:auto;
 }
 
 /*
