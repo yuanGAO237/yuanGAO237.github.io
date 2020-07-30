@@ -41,7 +41,7 @@ body {
 }
 
 .bar:hover {
-  fill: midnightblue;
+  fill: orangered;
 }
 
 .axis--x path {
