@@ -84,5 +84,26 @@ h3 {
 .two {
   margin-left: 50%;
   height: 200px;
+ }
+
+.container1 {
+  width: 100%;
+  height: 200px;
+  /*background: aqua;*/
+  margin: auto;
+  padding: 10px;
+}
+
+.one {
+  width: 50%;
+  height: 200px;
+  /*background: red;*/
+  float: left;
+}
+
+.two {
+  margin-left: 50%;
+  height: 200px;}
   /*background: black;/
 }
+
