@@ -71,6 +71,6 @@ svg.append('text')
         .attr("y", 0 - (margin.top / 2))
         .attr("text-anchor", "middle") 
         .style("font-size", "16px") 
-.text('Top 10 Games by number of ratings')
+.text('Top 20 App by number of ratings')
 
 
