@@ -29,7 +29,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
   });
 
   // set the domains of the axes
-  x.domain([0,5]);
+  x.domain([0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5]);
   y.domain([0, 100]);
 
   // add the svg elements
