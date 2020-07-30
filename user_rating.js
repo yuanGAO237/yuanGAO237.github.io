@@ -67,7 +67,16 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
     x.domain(data.map(function(d) { return d.user_rating; }));
     y.domain([0, 100]);
 
-  // add the svg elements
+    // add the svg elements
+    r.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+    r.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(y));
+  
   
       /////////////////////
     // update the bars
