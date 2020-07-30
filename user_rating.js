@@ -55,11 +55,11 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
       .attr("height", function(d) { return height - y(d.proportion); });
 
   g.append('text')
-.attr("x", (width / 2))             
-        .attr("y", 0 - (margin.top / 2))
+        .attr("x", (width / 2))             
+        .attr("y", 0 - (margin.top / 1.5))
         .attr("text-anchor", "middle") 
         .style("font-size", "16px") 
-.text('Rating Distribution')
+        .text('Rating Distribution')
 
   // add a change event handler 
   d3.select("#filter").on("change", function() {
