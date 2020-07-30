@@ -60,7 +60,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
         .attr("text-anchor", "middle") 
         .style("font-size", "16px") 
         .style('font-family','serif')
-        .text('Ratings Distribution')
+        .text('Ratings Distribution by Genre')
 
   // add a change event handler 
   d3.select("#filter").on("change", function() {
