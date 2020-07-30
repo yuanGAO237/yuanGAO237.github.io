@@ -66,7 +66,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
     var data = csv.filter(function(d) {return d.prime_genre === value;})
     ////////////////
     x.domain(data.map(function(d) { return d.user_rating; }));
-    d3.selectAll(g).call(d3.axisBottom(x));
+    //d3.selectAll(g).call(d3.axisBottom(x));
 
    
 
