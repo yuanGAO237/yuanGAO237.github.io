@@ -62,6 +62,22 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
         .style('font-family','serif')
         .text('Ratings Distribution by Genre')
 
+  ///////////add x label and y label
+  svg.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height - 6)
+    .text("User Rating");
+
+  svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("y", 6)
+    .attr("dy", ".75em")
+    .attr("transform", "rotate(-90)")
+    .text("Proportion");
+  ////////////////////////////////////
   // add a change event handler 
   d3.select("#filter").on("change", function() {
       applyFilter(this.value);
