@@ -67,7 +67,7 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
     .attr("class", "x label")
     .attr("text-anchor", "end")
     .attr("x", width)
-    .attr("y", height)
+    .attr("y", height+6)
     .text("User Rating");
 
   svg.append("text")
