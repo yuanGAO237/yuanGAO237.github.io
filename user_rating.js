@@ -1,5 +1,5 @@
 var svg = d3.select("svg"),
-    margin = {top: 20, right: 20, bottom: 30, left: 40},
+    margin = {top: 20, right: 20, bottom: 50, left: 50},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom;
 
@@ -66,17 +66,32 @@ d3.csv("https://raw.githubusercontent.com/yuanGAO237/yuanGAO237.github.io/master
   svg.append("text")
     .attr("class", "x label")
     .attr("text-anchor", "end")
-    .attr("x", width+margin.left+2)
-    .attr("y", height+(margin.top*2))
-    .text("User Rating");
+    .attr("x",(margin.left+(width+margin.right)/2))
+    .attr("y", height+(margin.top*3))
+    .text("User Rating")
+    .style('font-family','serif')
+    .style('font-size','12px');
 
-  svg.append("text")
+  /*svg.append("text")
     .attr("class", "y label")
     .attr("text-anchor", "end")
     .attr("y", 6)
-    .attr("dy", ".75em")
+    //.attr("dy", ".75em")
     .attr("transform", "rotate(-90)")
-    .text("Proportion");
+    .text("Proportion")
+    .style('font-family','serif')
+    .style('font-size','12px');*/
+
+   svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Proportion")
+      .style('font-family','serif')
+      .style('font-size','12px');
+     
   ////////////////////////////////////
   // add a change event handler 
   d3.select("#filter").on("change", function() {
