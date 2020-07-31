@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
-var margin = {top: 40, right: 40, bottom: 70, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+var margin = {top: 40, right: 40, bottom: 150, left: 150},
+    width = 560 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz2")
@@ -73,4 +73,31 @@ svg.append('text')
         .style("font-size", "16px") 
 .text('Top 20 App by number of ratings')
 
+svg.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x",(margin.left+(width+margin.right)/2))
+    .attr("y", height+(margin.top*3))
+    .text("App Name")
+    .style('font-family','serif')
+    .style('font-size','12px');
 
+  /*svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("y", 6)
+    //.attr("dy", ".75em")
+    .attr("transform", "rotate(-90)")
+    .text("Proportion")
+    .style('font-family','serif')
+    .style('font-size','12px');*/
+
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left/1.5)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Number of Ratings")
+      .style('font-family','serif')
+      .style('font-size','12px');
