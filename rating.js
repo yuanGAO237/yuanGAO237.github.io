@@ -50,9 +50,9 @@ svg.selectAll("mybar")
 */
 //////////////////////////
 // set the dimensions and margins of the graph
-var margin = {top: 40, right: 40, bottom: 70, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+var margin = {top: 40, right: 40, bottom: 80, left: 100},
+    width = 560 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz1")
@@ -118,8 +118,27 @@ svg.selectAll(".bar")
 })
 svg.append('text')
 .attr("x", (width / 2))             
-        .attr("y", 0 - (margin.top / 2))
+        .attr("y", 0 - (margin.top / 3))
         .attr("text-anchor", "middle") 
         .style("font-size", "16px") 
-.text('Total Rating Count by Genre')
+.text('Number of Ratings by Genre')
 
+svg.append("text")             
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top+ 20) + ")")
+      .style("text-anchor", "middle")
+      .text("Genre")
+      .style('font-family','serif')
+      .style('font-size','12px');
+
+
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0-margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Number of Ratings")
+      .style('font-family','serif')
+      .style('font-size','12px');
